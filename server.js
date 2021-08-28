@@ -50,7 +50,7 @@ app.put('/api/workouts/:id', async (req, res) => {
     res.json(currentRecord);
 });
 
-const port = 80;
+const port = process.env.PORT || 80;
 
 const main = () => {
     app.listen(port, () => {});
